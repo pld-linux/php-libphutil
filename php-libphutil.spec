@@ -1,4 +1,5 @@
 %define		pkgname	libphutil
+%define		php_min_version 5.2.3
 %include	/usr/lib/rpm/macros.php
 Summary:	Collection of utility classes and functions for PHP
 Name:		php-%{pkgname}
@@ -11,7 +12,19 @@ Source0:	https://github.com/facebook/libphutil/archive/master/libphutil.tar.gz
 URL:		http://www.phabricator.com/docs/libphutil/
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	sed >= 4.0
-Requires:	php-common
+Requires:	php(core) >= %{php_min_version}
+Requires:	php(date)
+Requires:	php(hash)
+Requires:	php(json)
+Requires:	php(mbstring)
+Requires:	php(pcre)
+Suggests:	php(gd)
+Suggests:	php(mysql)
+Suggests:	php(mysqli)
+Suggests:	php(openssl)
+Suggests:	php(simplexml)
+Suggests:	php(spl)
+Suggests:	php(xml)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
