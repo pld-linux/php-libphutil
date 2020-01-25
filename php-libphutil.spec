@@ -1,6 +1,5 @@
 %define		pkgname	libphutil
 %define		php_min_version 5.2.3
-%include	/usr/lib/rpm/macros.php
 Summary:	Collection of utility classes and functions for PHP
 Name:		php-%{pkgname}
 Version:	0.0.1
